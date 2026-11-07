@@ -18,6 +18,13 @@ Hai mươi câu hỏi VNR202 do người dùng cung cấp nằm trong mảng `ro
 </details>
 
 <details>
+<summary>Prompt đổi quần dài cho người nam</summary>
+
+> Use case: precise-object-edit. Asset type: an existing occupied VF3 browser-game photo with exact animation alignment. The single input is the exact edit target. Make one small clothing edit only: change the seated man's light shorts into full-length charcoal-gray trousers that cover his thighs, knees and lower legs down to his ankles. Use natural trouser fabric, realistic seated folds and the same bent-leg pose. Keep his existing black shoes and exposed hands/forearms in the exact same positions, with hands and forearms visibly in front of the new trousers. Keep the man's face, head, hair, white polo, posture, body proportions and the woman exactly as in the input. Lock every car, open-door, mirror, hinge, door-trim, seat, steering wheel, wheel, courtyard and background feature to its existing pixel location. Exact same landscape composition and 1256:844 aspect ratio, same crop and scale. This photo must match other game frames, so modify only the pants region. No text or extra elements. Natural realistic photographic edit.
+
+</details>
+
+<details>
 <summary>Prompt dọn góc ảnh</summary>
 
 > Extremely localized cleanup of the single provided photograph, for a three-state web-game animation where pixel alignment is essential. The provided image is the only edit target. Erase only the little white 'XEOTOVINFAST.COM.VN' overprint near the bottom-right edge below the rear wheel, plus the adjacent black rounded screenshot-control overlay in the very bottom-right corner. Seamlessly reconstruct the small area of real asphalt and lower tire detail hidden by those overlays, matching neighboring texture, road marking edges and lighting. Do not add text, a logo, or a patch. Do not alter any other part of the photo: preserve the exact composition, camera position, landscape aspect ratio, zoom and frame edges, car silhouette, wheel centers, body panels, people if present, colors, shadows, courtyard, foliage and background. Use the existing image as precisely as possible; only retouch the tiny lower-right region.
