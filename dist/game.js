@@ -130,11 +130,11 @@
 
   function setMode(mode) {
     game.dataset.state = mode;
-    const showingResult = mode === 'reveal' || mode === 'finished';
-    const showingCar = showingResult || mode === 'opening';
+    const showingResult = mode === 'reveal' || mode === 'finished' || mode === 'exhausted';
+    const showingCar = mode === 'reveal' || mode === 'finished' || mode === 'opening';
     board.hidden = showingCar;
     reveal.hidden = !showingCar;
-    quizContent.hidden = showingCar;
+    quizContent.hidden = showingCar || showingResult;
     result.hidden = !showingResult;
   }
 
@@ -152,9 +152,13 @@
       }
       button.setAttribute('aria-label', 'Xe ' + number + ', ' + status.textContent);
     });
-    garageHint.textContent = canPick
-      ? 'Chọn một chiếc xe chưa mở.'
-      : 'Trả lời đúng để mở khóa lượt chọn xe.';
+    if (game.dataset.state === 'exhausted') {
+      garageHint.textContent = 'Đã hết câu hỏi. Bấm Chơi lại để bắt đầu lượt mới.';
+    } else {
+      garageHint.textContent = canPick
+        ? 'Chọn một chiếc xe chưa mở.'
+        : 'Trả lời đúng để mở khóa lượt chọn xe.';
+    }
   }
 
   function updateCounts() {
@@ -240,24 +244,26 @@
   }
 
   function checkAnswer() {
-    if (selectedIndex === null) return;
+    if (game.dataset.state !== 'question' || selectedIndex === null) return;
 
+    const round = rounds[roundIndex];
     const answer = options.children[selectedIndex];
-    if (selectedIndex !== rounds[roundIndex].correct) {
-      answer.dataset.result = 'wrong';
-      answer.setAttribute('aria-pressed', 'false');
-      answer.disabled = true;
-      selectedIndex = null;
-      actionButton.disabled = true;
-      showFeedback('Chưa đúng. Hãy thử một đáp án khác!', 'wrong');
-      options.querySelector('.answer:not(:disabled)').focus();
-      return;
-    }
-
-    answer.dataset.result = 'correct';
     for (const button of options.children) {
       button.disabled = true;
     }
+    options.children[round.correct].dataset.result = 'correct';
+    if (selectedIndex !== round.correct) {
+      answer.dataset.result = 'wrong';
+      setMode('incorrect');
+      panelKicker.textContent = 'Đáp án';
+      actionButton.disabled = false;
+      actionLabel.textContent = roundIndex === rounds.length - 1 ? 'Xem kết quả' : 'Câu tiếp theo';
+      actionIcon.textContent = '→';
+      showFeedback('Chưa đúng. Đáp án đúng là ' + 'ABCD'[round.correct] + '. ' + round.options[round.correct] + '.', 'wrong');
+      actionButton.focus();
+      return;
+    }
+
     setMode('pick');
     updateBoard();
     actionButton.disabled = true;
@@ -449,7 +455,7 @@
     }
 
     actionButton.disabled = false;
-    actionLabel.textContent = finished ? 'Chơi lại' : 'Câu tiếp theo';
+    actionLabel.textContent = finished ? 'Chơi lại' : roundIndex === rounds.length - 1 ? 'Xem kết quả' : 'Câu tiếp theo';
     actionIcon.textContent = finished ? '↻' : '→';
   }
 
@@ -464,12 +470,25 @@
       case 'question':
         checkAnswer();
         break;
+      case 'incorrect':
       case 'reveal':
-        roundIndex += 1;
-        startRound();
-        questionTitle.focus();
+        if (roundIndex === rounds.length - 1) {
+          setMode('exhausted');
+          updateBoard();
+          panelKicker.textContent = 'Kết quả';
+          resultName.textContent = 'Hết câu hỏi';
+          resultDescription.textContent = 'Bạn đã tìm được ' + pairsFound + '/2 xe có người và mở ' + openedCars.size + ' xe. Chơi lại để thử lượt mới.';
+          actionLabel.textContent = 'Chơi lại';
+          actionIcon.textContent = '↻';
+          resultName.focus();
+        } else {
+          roundIndex += 1;
+          startRound();
+          questionTitle.focus();
+        }
         break;
       case 'finished':
+      case 'exhausted':
         startGame();
         questionTitle.focus();
         break;

@@ -2,7 +2,7 @@
 
 Mở `dist/index.html` bằng trình duyệt để chơi. Bản thử chạy trực tiếp từ tệp và không cần cài thư viện.
 
-Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật hư cấu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Tìm đủ hai xe có người để thắng. Khi chơi lại, game xáo vị trí hai xe có người.
+Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật hư cấu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Nếu trả lời sai, game đánh dấu đáp án đúng, hiện nội dung đáp án và chờ bạn bấm **Câu tiếp theo**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Tìm đủ hai xe có người trong 10 câu hỏi để thắng. Nếu hết câu hỏi, game tổng kết lượt chơi và cho phép chơi lại. Khi chơi lại, game xáo vị trí hai xe có người.
 
 Đoạn MP3 đã cung cấp được lưu tại `dist/assets/vf3-door.mp3` và tự phát khi bạn chọn xe. Cửa mở sau nhịp đầu của đoạn nhạc, rồi nhạc tiếp tục trong màn kết quả. Để đổi nhạc, vào **Cách chơi** rồi chọn một tệp MP3, M4A hoặc WAV đã cắt còn tối đa 8 giây.
 
