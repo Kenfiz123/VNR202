@@ -603,14 +603,12 @@
     revealStatus.textContent = hasPeople ? 'Có hai người' : 'Xe trống';
     revealHeading.setAttribute('aria-label', revealHeading.textContent + ', ' + revealStatus.textContent);
     panelKicker.textContent = finished ? 'Hoàn thành' : 'Kết quả mở xe';
+    resultName.textContent = hasPeople ? 'BẠN ĐÃ TÌM ĐƯỢC CHỊ MAI' : 'Xe này trống';
     if (finished) {
-      resultName.textContent = 'Bạn đã tìm đủ hai xe!';
       resultDescription.textContent = 'Bạn mở ' + openedCars.size + ' xe để tìm đủ hai xe có người.';
     } else if (hasPeople) {
-      resultName.textContent = 'Tìm thấy hai người!';
       resultDescription.textContent = 'Bạn đã tìm thấy xe đầu tiên có người. Còn một xe nữa.';
     } else {
-      resultName.textContent = 'Xe này trống';
       resultDescription.textContent = 'Trả lời câu tiếp theo để mở một chiếc xe khác.';
     }
 
