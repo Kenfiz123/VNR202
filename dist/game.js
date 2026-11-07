@@ -3,64 +3,224 @@
 
   const rounds = [
     {
-      question: 'Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập tại quảng trường nào?',
+      question: 'Cuộc Tổng tuyển cử ngày 25/4/1976 có ý nghĩa quan trọng nhất nào?',
       options: [
-        'Quảng trường Lam Sơn',
-        'Quảng trường Ba Đình',
-        'Quảng trường Đông Kinh Nghĩa Thục',
-        'Quảng trường Cách mạng Tháng Tám',
+        'Đánh dấu Việt Nam gia nhập ASEAN',
+        'Chính thức mở đầu công cuộc Đổi mới',
+        'Tạo cơ sở chính trị và pháp lý cho Nhà nước thống nhất',
+        'Đưa Việt Nam trở thành nước xuất khẩu gạo',
+      ],
+      correct: 2,
+      explanation: 'Cuộc bầu cử góp phần xây dựng bộ máy Nhà nước thống nhất sau năm 1975.',
+    },
+    {
+      question: 'Nguyên nhân dẫn đến khủng hoảng kinh tế Việt Nam trước năm 1986 được giải thích đầy đủ nhất như thế nào?',
+      options: [
+        'Chỉ do hậu quả chiến tranh',
+        'Kết hợp khó khăn khách quan với hạn chế trong cơ chế quản lý',
+        'Chỉ do thiếu lao động và tài nguyên',
+        'Chủ yếu do Việt Nam gia nhập WTO quá muộn',
       ],
       correct: 1,
+      explanation: 'Tài liệu nhấn mạnh cả hoàn cảnh chiến tranh, cấm vận và hạn chế của cơ chế tập trung, quan liêu, bao cấp.',
     },
     {
-      question: 'Chiến thắng Điện Biên Phủ diễn ra vào năm nào?',
-      options: ['1945', '1950', '1954', '1975'],
-      correct: 2,
-    },
-    {
-      question: 'Chiến dịch nào kết thúc vào ngày 30/4/1975?',
+      question: 'Lạm phát năm 1986 của Việt Nam đạt khoảng bao nhiêu?',
       options: [
-        'Chiến dịch Hồ Chí Minh',
-        'Chiến dịch Việt Bắc',
-        'Chiến dịch Biên giới',
-        'Chiến dịch Điện Biên Phủ',
+        '67,1%',
+        '120,5%',
+        '425,3%',
+        '774,7%',
+      ],
+      correct: 3,
+      explanation: 'Văn kiện Đại hội VIII nêu mức lạm phát năm 1986 là 774,7%, phản ánh tình trạng khủng hoảng kinh tế trước Đổi mới.',
+    },
+    {
+      question: 'Đại hội VI của Đảng năm 1986 đánh dấu sự chuyển hướng quan trọng nào?',
+      options: [
+        'Đổi mới tư duy kinh tế, khắc phục dần cơ chế tập trung bao cấp',
+        'Chuyển hoàn toàn sang kinh tế tư bản chủ nghĩa',
+        'Ngừng hoạt động kinh tế đối ngoại',
+        'Chỉ tập trung phát triển công nghiệp nặng',
       ],
       correct: 0,
+      explanation: 'Đại hội VI mở đầu công cuộc Đổi mới toàn diện, trước hết nhấn mạnh đổi mới tư duy kinh tế.',
     },
     {
-      question: 'Nguyễn Tất Thành rời bến Nhà Rồng đi tìm đường cứu nước vào năm nào?',
-      options: ['1905', '1920', '1930', '1911'],
-      correct: 3,
-    },
-    {
-      question: 'Đảng Cộng sản Việt Nam được thành lập vào năm nào?',
-      options: ['1925', '1930', '1941', '1945'],
+      question: 'Năm 1989, Việt Nam xuất khẩu khoảng bao nhiêu triệu tấn gạo?',
+      options: [
+        '0,5 triệu tấn',
+        '1,4 triệu tấn',
+        '3,8 triệu tấn',
+        '5,2 triệu tấn',
+      ],
       correct: 1,
+      explanation: 'Xuất khẩu khoảng 1,4 triệu tấn gạo là dấu mốc cho sự cải thiện năng lực sản xuất nông nghiệp.',
     },
     {
-      question: 'Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập vào năm nào?',
-      options: ['1930', '1941', '1944', '1946'],
+      question: 'Kết quả nào phản ánh đúng chuyển biến kinh tế Việt Nam giai đoạn 1991–1995?',
+      options: [
+        'GDP giảm và lạm phát liên tục tăng',
+        'GDP tăng 3% và lạm phát giữ ở 774,7%',
+        'GDP tăng bình quân 8,2%/năm và lạm phát giảm mạnh',
+        'GDP không tăng nhưng kim ngạch xuất khẩu tăng',
+      ],
       correct: 2,
+      explanation: 'GDP tăng bình quân 8,2%/năm; lạm phát giảm từ 67,1% năm 1991 xuống 12,7% năm 1995.',
     },
     {
-      question: 'Quốc hội thông qua bản Hiến pháp đầu tiên của nước Việt Nam Dân chủ Cộng hòa vào năm nào?',
-      options: ['1946', '1954', '1959', '1980'],
+      question: 'Theo số liệu công bố cuối năm 2020, GDP Việt Nam đạt khoảng bao nhiêu?',
+      options: [
+        '343 tỷ USD',
+        '143 tỷ USD',
+        '543 tỷ USD',
+        '743 tỷ USD',
+      ],
       correct: 0,
+      explanation: 'Quy mô GDP được công bố khoảng 343 tỷ USD, với GDP bình quân đầu người khoảng 3.521 USD.',
     },
     {
-      question: 'Hiệp định nào về đình chỉ chiến sự ở Việt Nam được ký năm 1954?',
-      options: ['Hiệp định Paris', 'Hiệp định Sơ bộ', 'Hiệp định Élysée', 'Hiệp định Genève'],
+      question: 'Theo ước tính công bố cuối năm 2020, tổng kim ngạch xuất nhập khẩu hàng hóa Việt Nam đạt khoảng bao nhiêu?',
+      options: [
+        '281,5 tỷ USD',
+        '343 tỷ USD',
+        '421,7 tỷ USD',
+        '543,9 tỷ USD',
+      ],
       correct: 3,
+      explanation: '543,9 tỷ USD là tổng kim ngạch xuất nhập khẩu; 281,5 tỷ USD là kim ngạch xuất khẩu.',
     },
     {
-      question: 'Hiệp định Paris về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam được ký năm nào?',
-      options: ['1954', '1973', '1975', '1976'],
+      question: 'Vì sao không thể chỉ dựa vào quy mô GDP để đánh giá toàn diện thành tựu kinh tế?',
+      options: [
+        'Vì GDP chỉ đo được lượng gạo xuất khẩu',
+        'Vì GDP không liên quan đến phát triển kinh tế',
+        'Vì còn phải xét năng suất, chất lượng tăng trưởng và tính bền vững',
+        'Vì GDP chỉ phản ánh hoạt động đối ngoại',
+      ],
+      correct: 2,
+      explanation: 'Tài liệu phân biệt rõ quy mô kinh tế với chất lượng tăng trưởng và khả năng tự chủ.',
+    },
+    {
+      question: 'Theo chuẩn Tổng cục Thống kê – Ngân hàng Thế giới trong tài liệu, tỷ lệ nghèo Việt Nam năm 2016 còn bao nhiêu?',
+      options: [
+        '20,7%',
+        '9,8%',
+        '13,6%',
+        '1,6%',
+      ],
       correct: 1,
+      explanation: 'Tỷ lệ nghèo giảm từ 20,7% năm 2010 xuống 9,8% năm 2016.',
     },
     {
-      question: 'Quốc hội quyết định đặt tên nước là Cộng hòa xã hội chủ nghĩa Việt Nam vào năm nào?',
-      options: ['1976', '1975', '1980', '1992'],
+      question: 'Tỷ lệ nghèo nông thôn 13,6% và thành thị 1,6% năm 2016 cho thấy điều gì?',
+      options: [
+        'Thành quả giảm nghèo chưa phân bố đồng đều giữa các khu vực',
+        'Khu vực thành thị có tỷ lệ nghèo cao hơn nông thôn',
+        'Việt Nam chưa đạt kết quả giảm nghèo',
+        'Hai khu vực có điều kiện sống hoàn toàn giống nhau',
+      ],
       correct: 0,
+      explanation: 'Sự khác biệt giữa nông thôn và thành thị cho thấy còn khoảng cách về điều kiện sống và cơ hội phát triển.',
+    },
+    {
+      question: 'Chỉ số phát triển con người (HDI) kết hợp những yếu tố nào?',
+      options: [
+        'Xuất khẩu, nhập khẩu và đầu tư',
+        'Dân số, diện tích và tài nguyên',
+        'Quốc phòng, đối ngoại và công nghiệp',
+        'Sức khỏe, giáo dục và thu nhập',
+      ],
+      correct: 3,
+      explanation: 'HDI cung cấp góc nhìn về chất lượng phát triển con người, không chỉ thu nhập kinh tế.',
+    },
+    {
+      question: 'Di sản văn hóa Việt Nam nào được UNESCO ghi danh năm 2009 theo tài liệu?',
+      options: [
+        'Đờn ca tài tử Nam Bộ',
+        'Dân ca Quan họ Bắc Ninh',
+        'Nghệ thuật Bài Chòi Trung Bộ',
+        'Dân ca Ví, Giặm Nghệ Tĩnh',
+      ],
+      correct: 1,
+      explanation: 'Dân ca Quan họ Bắc Ninh được ghi danh vào Danh sách di sản văn hóa phi vật thể đại diện của nhân loại năm 2009.',
+    },
+    {
+      question: 'Hiến pháp được Quốc hội thông qua ngày 28/11/2013 có ý nghĩa nổi bật gì?',
+      options: [
+        'Đánh dấu Việt Nam gia nhập WTO',
+        'Thay thế hoàn toàn hệ thống pháp luật',
+        'Phát triển khuôn khổ thể chế, quyền con người và quyền công dân',
+        'Chính thức khởi đầu chính sách Đổi mới',
+      ],
+      correct: 2,
+      explanation: 'Hiến pháp 2013 là dấu mốc về tổ chức quyền lực nhà nước, quyền con người và quyền công dân.',
+    },
+    {
+      question: 'Thứ tự nào sau đây đúng với các dấu mốc hội nhập quốc tế của Việt Nam?',
+      options: [
+        'WTO → ASEAN → Tuyên bố bình thường hóa quan hệ với Hoa Kỳ',
+        'ASEAN → WTO → Tuyên bố bình thường hóa quan hệ với Hoa Kỳ',
+        'WTO → Tuyên bố bình thường hóa quan hệ với Hoa Kỳ → ASEAN',
+        'Tuyên bố bình thường hóa quan hệ với Hoa Kỳ → ASEAN → WTO',
+      ],
+      correct: 3,
+      explanation: 'Việt Nam và Hoa Kỳ tuyên bố bình thường hóa quan hệ tháng 7/1995, trước khi Việt Nam gia nhập ASEAN ngày 28/7/1995. Việt Nam trở thành thành viên WTO ngày 11/1/2007.',
+    },
+    {
+      question: 'Trong giai đoạn 2014–2018, Việt Nam đã triển khai bao nhiêu lượt sĩ quan theo hình thức cá nhân tham gia hoạt động gìn giữ hòa bình Liên hợp quốc?',
+      options: [
+        '29 lượt sĩ quan',
+        '59 lượt sĩ quan',
+        '92 lượt sĩ quan',
+        '129 lượt sĩ quan',
+      ],
+      correct: 0,
+      explanation: 'Trong giai đoạn 2014–2018, Việt Nam triển khai 29 lượt sĩ quan theo hình thức cá nhân tới các phái bộ ở Nam Sudan và Cộng hòa Trung Phi. Số này được thống kê riêng với lực lượng bệnh viện dã chiến.',
+    },
+    {
+      question: 'Việt Nam nhận 192/193 phiếu khi được bầu vào Hội đồng Bảo an Liên hợp quốc năm 2019. Kết quả này thể hiện rõ nhất điều gì?',
+      options: [
+        'Việt Nam có GDP lớn nhất Đông Nam Á',
+        'Việt Nam đã trở thành thành viên thường trực',
+        'Mức độ tín nhiệm và uy tín quốc tế của Việt Nam',
+        'Việt Nam có quyền phủ quyết tại Liên hợp quốc',
+      ],
+      correct: 2,
+      explanation: 'Số phiếu ủng hộ cao là một chỉ dấu về sự tín nhiệm quốc tế đối với Việt Nam.',
+    },
+    {
+      question: 'Tính theo sức mua tương đương (PPP) năm 2011, năng suất lao động Việt Nam năm 2018 bằng khoảng bao nhiêu so với Thái Lan và Malaysia?',
+      options: [
+        '19% Thái Lan và 37% Malaysia',
+        '37% Thái Lan và 19% Malaysia',
+        '70% Thái Lan và 50% Malaysia',
+        'Gần bằng cả hai quốc gia',
+      ],
+      correct: 1,
+      explanation: 'Số liệu tính theo sức mua tương đương năm 2011 cho thấy khoảng cách năng suất lao động đáng kể.',
+    },
+    {
+      question: 'Theo ước tính công bố cuối năm 2020, khu vực FDI chiếm 72,2% kim ngạch xuất khẩu hàng hóa (kể cả dầu thô) đặt ra yêu cầu gì?',
+      options: [
+        'Nâng cao năng lực doanh nghiệp trong nước và khả năng liên kết công nghệ',
+        'Ngừng tiếp nhận mọi nguồn vốn nước ngoài',
+        'Chỉ tập trung vào doanh nghiệp FDI',
+        'Giảm hoàn toàn hoạt động xuất khẩu',
+      ],
+      correct: 0,
+      explanation: 'Tài liệu nhấn mạnh yêu cầu tăng năng lực doanh nghiệp trong nước và khả năng tiếp nhận công nghệ.',
+    },
+    {
+      question: 'Từ vụ án MobiFone mua cổ phần AVG, bài học quan trọng nhất về quản lý nguồn lực là gì?',
+      options: [
+        'Nên ngừng mọi hoạt động đầu tư lớn',
+        'Chỉ cần tăng vốn đầu tư nhà nước',
+        'Không cần giám sát nếu dự án có lợi nhuận',
+        'Tăng minh bạch, trách nhiệm giải trình và giám sát',
+      ],
+      correct: 3,
+      explanation: 'Đây là bài học về phòng ngừa tham nhũng, lãng phí và sử dụng hiệu quả nguồn lực phát triển.',
     },
   ];
 
@@ -259,7 +419,7 @@
       actionButton.disabled = false;
       actionLabel.textContent = roundIndex === rounds.length - 1 ? 'Xem kết quả' : 'Câu tiếp theo';
       actionIcon.textContent = '→';
-      showFeedback('Chưa đúng. Đáp án đúng là ' + 'ABCD'[round.correct] + '. ' + round.options[round.correct] + '.', 'wrong');
+      showFeedback('Chưa đúng. Đáp án đúng là ' + 'ABCD'[round.correct] + '. ' + round.options[round.correct] + '. ' + round.explanation, 'wrong');
       actionButton.focus();
       return;
     }
@@ -269,7 +429,7 @@
     actionButton.disabled = true;
     actionLabel.textContent = 'Chọn 1 xe ở bãi đỗ';
     actionIcon.textContent = '←';
-    showFeedback('Chính xác! Bạn được mở một chiếc xe.', 'correct');
+    showFeedback('Chính xác! ' + round.explanation + ' Bạn được mở một chiếc xe.', 'correct');
     carGrid.querySelector('.car-slot:not(:disabled)').focus();
   }
 

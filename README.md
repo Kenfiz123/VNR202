@@ -2,11 +2,13 @@
 
 Mở `dist/index.html` bằng trình duyệt để chơi. Bản thử chạy trực tiếp từ tệp và không cần cài thư viện.
 
-Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật hư cấu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Nếu trả lời sai, game đánh dấu đáp án đúng, hiện nội dung đáp án và chờ bạn bấm **Câu tiếp theo**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Tìm đủ hai xe có người trong 10 câu hỏi để thắng. Nếu hết câu hỏi, game tổng kết lượt chơi và cho phép chơi lại. Khi chơi lại, game xáo vị trí hai xe có người.
+Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật hư cấu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Nếu trả lời sai, game đánh dấu đáp án đúng, hiện nội dung đáp án và giải thích rồi chờ bạn bấm **Câu tiếp theo**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Tìm đủ hai xe có người trong 20 câu hỏi để thắng. Nếu hết câu hỏi, game tổng kết lượt chơi và cho phép chơi lại. Khi chơi lại, game xáo vị trí hai xe có người.
 
 Đoạn MP3 đã cung cấp được lưu tại `dist/assets/vf3-door.mp3` và tự phát khi bạn chọn xe. Cửa mở sau nhịp đầu của đoạn nhạc, rồi nhạc tiếp tục trong màn kết quả. Để đổi nhạc, vào **Cách chơi** rồi chọn một tệp MP3, M4A hoặc WAV đã cắt còn tối đa 8 giây.
 
-Mười câu hỏi mẫu về lịch sử Việt Nam nằm trong mảng `rounds` của `dist/game.js`. Ảnh xe đóng cửa `dist/assets/vf3-closed.png` dựa trên ảnh tham chiếu đã cung cấp. Ảnh minh họa `dist/assets/vf3-open.jpg` được tạo bằng ImageGen tích hợp, với yêu cầu mở cửa bên lái khoảng 65° để lộ ghế và khoang lái, đồng thời giữ góc máy, chiếc xe, sân và ánh sáng của ảnh gốc. Khi mở xe có người, game dùng ảnh `dist/assets/vf3-occupied.jpg`, tạo từ cảnh mở cửa và minh họa hai nhân vật hư cấu đang ngồi ở ghế trước. Cả ba ảnh dùng trong game đã được chỉnh bằng ImageGen để xóa dòng chữ và nút chụp màn hình ở góc dưới bên phải. Ảnh tham chiếu có dòng chữ “XEOTOVINFAST.COM.VN”.
+Hai mươi câu hỏi VNR202 do người dùng cung cấp nằm trong mảng `rounds` của `dist/game.js`, kèm đáp án và giải thích đã rà soát nguồn. Các số liệu kinh tế năm 2020 được ghi rõ mốc công bố, câu về quan hệ Việt–Mỹ dùng mốc tuyên bố bình thường hóa và số lượng sĩ quan gìn giữ hòa bình được tính theo lượt triển khai.
+
+Ảnh xe đóng cửa `dist/assets/vf3-closed.png` dựa trên ảnh tham chiếu đã cung cấp. Ảnh minh họa `dist/assets/vf3-open.jpg` được tạo bằng ImageGen tích hợp, với yêu cầu mở cửa bên lái khoảng 65° để lộ ghế và khoang lái, đồng thời giữ góc máy, chiếc xe, sân và ánh sáng của ảnh gốc. Khi mở xe có người, game dùng ảnh `dist/assets/vf3-occupied.jpg`, tạo từ cảnh mở cửa và minh họa hai nhân vật hư cấu đang ngồi ở ghế trước. Cả ba ảnh dùng trong game đã được chỉnh bằng ImageGen để xóa dòng chữ và nút chụp màn hình ở góc dưới bên phải. Ảnh tham chiếu có dòng chữ “XEOTOVINFAST.COM.VN”.
 
 <details>
 <summary>Prompt tạo ảnh mở cửa</summary>
