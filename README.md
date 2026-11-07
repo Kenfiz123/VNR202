@@ -2,7 +2,9 @@
 
 Mở `dist/index.html` bằng trình duyệt để chơi. Bản thử chạy trực tiếp từ tệp và không cần cài thư viện.
 
-Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật theo ảnh tham chiếu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Nếu trả lời sai, game đánh dấu đáp án đúng, hiện nội dung đáp án và giải thích rồi chờ bạn bấm **Câu tiếp theo**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Khi tìm thấy xe có người, game hiện **BẠN ĐÃ TÌM ĐƯỢC CHỊ MAI**. Tìm đủ hai xe có người trong 20 câu hỏi để thắng. Nếu hết câu hỏi, game tổng kết lượt chơi và cho phép chơi lại. Khi chơi lại, game xáo vị trí hai xe có người.
+Trong bãi có 10 chiếc VF3. Hai xe có hai nhân vật theo ảnh tham chiếu bên trong, tám xe còn lại trống. Chọn đáp án và bấm **Kiểm tra**. Nếu trả lời sai, game đánh dấu đáp án đúng, hiện nội dung đáp án và giải thích rồi chờ bạn bấm **Câu tiếp theo**. Mỗi câu đúng cho bạn tự chọn một xe chưa mở. Cửa xe xoay ra ngoài rồi game báo kết quả. Khi tìm thấy xe có người, game hiện **BẠN ĐÃ TÌM ĐƯỢC CHỊ MAI**. Tìm đủ hai xe có người trong 20 câu hỏi để thắng. Nếu hết câu hỏi, game tổng kết lượt chơi và cho phép chơi lại.
+
+Cơ chế bảo hiểm tính theo thứ tự mở xe. Mỗi lượt chơi chọn ngẫu nhiên, đồng đều một lượt trúng trong khoảng 1–7 và một lượt trúng trong khoảng 8–10. Kết quả được gán cho chiếc xe người chơi chọn ở lượt tương ứng. Trả lời sai không tăng lượt mở. Mở lại xe đã mở được chặn. Khi chơi lại, các lượt trúng được chọn lại.
 
 Đoạn MP3 đã cung cấp được lưu tại `dist/assets/vf3-door.mp3` và tự phát khi bạn chọn xe. Cửa mở sau nhịp đầu của đoạn nhạc, rồi nhạc tiếp tục trong màn kết quả. Để đổi nhạc, vào **Cách chơi** rồi chọn một tệp MP3, M4A hoặc WAV đã cắt còn tối đa 8 giây.
 

@@ -225,6 +225,7 @@
   ];
 
   const carCount = 10;
+  const firstFindDeadline = 7;
   const maxDoorAudioSeconds = 8;
   const game = document.getElementById('game');
   const garage = document.getElementById('garage');
@@ -259,7 +260,7 @@
   const doorAudioStatus = document.getElementById('door-audio-status');
 
   const openedCars = new Map();
-  let occupiedCars;
+  let occupiedTurns;
   let pairsFound = 0;
   let roundIndex = 0;
   let selectedIndex = null;
@@ -391,11 +392,9 @@
   }
 
   function startGame() {
-    const first = Math.floor(Math.random() * carCount);
-    const remaining = Math.floor(Math.random() * (carCount - 1));
-    // Shift past the first car to keep the second choice distinct.
-    const second = remaining >= first ? remaining + 1 : remaining;
-    occupiedCars = new Set([first, second]);
+    const firstTurn = Math.floor(Math.random() * firstFindDeadline) + 1;
+    const secondTurn = firstFindDeadline + Math.floor(Math.random() * (carCount - firstFindDeadline)) + 1;
+    occupiedTurns = new Set([firstTurn, secondTurn]);
     openedCars.clear();
     pairsFound = 0;
     roundIndex = 0;
@@ -555,7 +554,8 @@
   async function openCar(index) {
     if (game.dataset.state !== 'pick' || openedCars.has(index)) return;
 
-    const outcome = occupiedCars.has(index) ? 'found' : 'empty';
+    const openingTurn = openedCars.size + 1;
+    const outcome = occupiedTurns.has(openingTurn) ? 'found' : 'empty';
     reveal.dataset.photo = outcome;
     revealHeading.textContent = 'Xe ' + twoDigits(index + 1);
 
@@ -593,7 +593,7 @@
     openedCars.set(index, outcome);
     if (hasPeople) pairsFound += 1;
 
-    const finished = pairsFound === occupiedCars.size;
+    const finished = pairsFound === occupiedTurns.size;
     setMode(finished ? 'finished' : 'reveal');
     game.dataset.result = outcome;
     carFrame.removeAttribute('aria-hidden');
